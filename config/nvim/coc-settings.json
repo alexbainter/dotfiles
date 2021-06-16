@@ -1,0 +1,14 @@
+{
+  "prettier.requireConfig": true,
+  "coc.preferences.formatOnSaveFiletypes": [
+    "css",
+    "html",
+    "javascript",
+    "javascriptreact",
+    "json",
+    "typescript",
+    "typescriptreact",
+    "markdown",
+    "scss"
+  ]
+}
