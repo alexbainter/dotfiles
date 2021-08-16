@@ -10,5 +10,6 @@
     "typescriptreact",
     "markdown",
     "scss"
-  ]
+  ],
+  "tsserver.enableJavascript": false
 }
