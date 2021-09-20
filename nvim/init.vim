@@ -3,6 +3,7 @@ set shiftwidth=2
 set expandtab
 set number
 set laststatus=2
+set mouse=a
 
 " Plugins will be downloaded under the specified directory.
 call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
@@ -50,4 +51,3 @@ colorscheme onedark
 
 command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
 
-set mouse=a
