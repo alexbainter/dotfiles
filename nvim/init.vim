@@ -13,6 +13,7 @@ Plug 'joshdick/onedark.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'jiangmiao/auto-pairs'
 Plug 'itchyny/lightline.vim'
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
@@ -49,3 +50,4 @@ colorscheme onedark
 
 command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
 
+set mouse=a
