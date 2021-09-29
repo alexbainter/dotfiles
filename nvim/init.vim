@@ -45,7 +45,7 @@ function! s:check_back_space() abort
 endfunction
 
 let g:lightline = {
-      \ 'colorscheme': 'onedark',
+      \ 'colorscheme': 'tender',
       \ }
 
 syntax on
