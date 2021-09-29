@@ -11,5 +11,6 @@
     "markdown",
     "scss"
   ],
-  "tsserver.enableJavascript": false
+  "tsserver.enableJavascript": false,
+  "diagnostic.checkCurrentLine": true
 }
