@@ -12,7 +12,6 @@ call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'joshdick/onedark.vim'
 Plug 'sheerun/vim-polyglot'
-Plug 'jiangmiao/auto-pairs'
 Plug 'itchyny/lightline.vim'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'jacoborus/tender.vim'
@@ -27,7 +26,8 @@ let g:coc_global_extensions = [
       \ 'coc-css',
       \ 'coc-tsserver',
       \ 'coc-eslint',
-      \ 'coc-prettier'
+      \ 'coc-prettier',
+      \ 'coc-pairs'
       \]
 
 " Use tab for trigger completion with characters ahead and navigate.
