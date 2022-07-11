@@ -4,18 +4,17 @@ set expandtab
 set number
 set laststatus=2
 set mouse=a
+set termguicolors
 
 " Plugins will be downloaded under the specified directory.
 call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
 
 " Declare the list of plugins.
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'joshdick/onedark.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'itchyny/lightline.vim'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
-Plug 'jacoborus/tender.vim'
-Plug 'morhetz/gruvbox'
+Plug 'rafi/awesome-vim-colorschemes'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
@@ -44,12 +43,10 @@ function! s:check_back_space() abort
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
-let g:lightline = {
-      \ 'colorscheme': 'tender',
-      \ }
 
 syntax on
-colorscheme tender
+colorscheme onedark
+let g:lightline = { 'colorscheme': 'onedark' }
 
 command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
 
