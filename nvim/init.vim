@@ -15,6 +15,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'itchyny/lightline.vim'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'rafi/awesome-vim-colorschemes'
+Plug 'logico/typewriter-vim'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
@@ -40,9 +41,30 @@ inoremap <silent><expr> <Tab>
       \ CheckBackspace() ? "\<Tab>" :
       \ coc#refresh()
 
+
+function! UpdateLightline()
+  call lightline#init()
+  call lightline#colorscheme()
+  call lightline#update()
+endfunction
+
+function! DarkMode()
+  set background=dark
+  colorscheme onedark
+  let g:lightline = { 'colorscheme': 'onedark' }
+  call UpdateLightline()
+endfunction
+
+function! EInkMode()
+  set background=light
+  colorscheme typewriter
+  let g:lightline = { 'colorscheme': 'one' }
+  call UpdateLightline()
+endfunction
+
+call DarkMode()
+
 syntax on
-colorscheme onedark
-let g:lightline = { 'colorscheme': 'onedark' }
 
 command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
 
