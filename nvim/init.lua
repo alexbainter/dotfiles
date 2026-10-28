@@ -73,7 +73,11 @@ end
 vim.api.nvim_create_user_command('DarkMode', dark_mode, { nargs = 0 })
 vim.api.nvim_create_user_command('EInkMode', eink_mode, { nargs = 0 })
 
-dark_mode()
+if vim.env.LC_EINK then
+  eink_mode()
+else
+  dark_mode()
+end
 
 vim.cmd.syntax('on')
 
